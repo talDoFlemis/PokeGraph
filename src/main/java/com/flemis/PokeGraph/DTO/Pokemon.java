@@ -11,6 +11,8 @@ public class Pokemon {
     private String name;
     @Transient
     private String sprite;
+    @Transient
+    private String pokedex;
     private Integer attRank = 0;
     private Integer spdRank = 0;
     private Integer lifeRank = 0;
@@ -56,6 +58,15 @@ public class Pokemon {
         this.sprite = sprite;
     }
 
+    public void setPokedex(String pokedex) {
+        this.pokedex = pokedex;
+    }
+
+    public String getPokedex() {
+        return String.format("https://www.pokemon.com/br/pokedex/%s",
+                this.name);
+    }
+
     public Integer getAttRank() {
         return this.attRank;
     }
@@ -80,4 +91,16 @@ public class Pokemon {
         this.lifeRank = lifeRank;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                " id='" + getId() + "'" +
+                ", name='" + getName() + "'" +
+                ", sprite='" + getSprite() + "'" +
+                ", pokedex_link='" + getPokedex() + "'" +
+                ", attRank='" + getAttRank() + "'" +
+                ", spdRank='" + getSpdRank() + "'" +
+                ", lifeRank='" + getLifeRank() + "'" +
+                "}";
+    }
 }
