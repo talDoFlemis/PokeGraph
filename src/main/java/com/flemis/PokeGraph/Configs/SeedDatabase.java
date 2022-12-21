@@ -7,7 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import com.flemis.PokeGraph.DTO.Pokemon;
-import com.flemis.PokeGraph.DTO.PokemonRespository;
+import com.flemis.PokeGraph.Repositories.PokemonRespository;
 
 @Component
 public class SeedDatabase implements CommandLineRunner {

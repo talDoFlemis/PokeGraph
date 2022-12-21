@@ -1,10 +1,12 @@
-package com.flemis.PokeGraph.DTO;
+package com.flemis.PokeGraph.Repositories;
 
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+
+import com.flemis.PokeGraph.DTO.Pokemon;
 
 import io.lettuce.core.dynamic.annotation.Param;
 import jakarta.transaction.Transactional;

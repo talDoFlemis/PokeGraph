@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.flemis.PokeGraph.DTO.Pokemon;
-import com.flemis.PokeGraph.DTO.PokemonRespository;
+import com.flemis.PokeGraph.Repositories.PokemonRespository;
 
 @Service
 public class SpeedService {
