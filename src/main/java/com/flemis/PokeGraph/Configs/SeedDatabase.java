@@ -28,7 +28,7 @@ public class SeedDatabase implements CommandLineRunner {
         if (pokemonRespository.count() == 0) {
             Pokemon bul = new Pokemon(1, "bulba");
             Pokemon ch = new Pokemon(2, "charmander");
-            Pokemon tubias = new Pokemon(2, "tubias", 23, 22, 21);
+            Pokemon tubias = new Pokemon(3, "tubias", 23, 22, 21);
             pokemonRespository.saveAll(List.of(bul, ch, tubias));
         }
         System.out.println(pokemonRespository.count());

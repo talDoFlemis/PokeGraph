@@ -13,23 +13,23 @@ public interface PokemonRespository extends JpaRepository<Pokemon, Integer> {
     @Query("UPDATE Pokemon p set p.attRank = p.attRank + 1 where p.id = :id")
     public Pokemon incrementAttack(@Param("id") Integer id);
 
-    public List<Pokemon> findAllByOrderByAttRankAsc();
+    public List<Pokemon> findAllByOrderByAttRankDesc();
 
-    public List<Pokemon> findTop25ByOrderByAttRankAsc();
+    public List<Pokemon> findTop25ByOrderByAttRankDesc();
 
     // Speed Queries
     @Query("UPDATE Pokemon p set p.spdRank = p.spdRank + 1 where p.id = :id")
     public Pokemon incrementSpeed(@Param("id") Integer id);
 
-    public List<Pokemon> findAllByOrderBySpdRankAsc();
+    public List<Pokemon> findAllByOrderBySpdRankDesc();
 
-    public List<Pokemon> findTop25ByOrderBySpdRankAsc();
+    public List<Pokemon> findTop25ByOrderBySpdRankDesc();
 
     // Life Queries
     @Query("UPDATE Pokemon p set p.lifeRank = p.lifeRank + 1 where p.id = :id")
     public Pokemon incrementLife(@Param("id") Integer id);
 
-    public List<Pokemon> findAllByOrderByLifeRankAsc();
+    public List<Pokemon> findAllByOrderByLifeRankDesc();
 
-    public List<Pokemon> findTop25ByOrderByLifeRankAsc();
+    public List<Pokemon> findTop25ByOrderByLifeRankDesc();
 }

@@ -19,11 +19,11 @@ public class AttackService {
     }
 
     public List<Pokemon> getAll() {
-        return pokemonRespository.findAllByOrderByAttRankAsc();
+        return pokemonRespository.findAllByOrderByAttRankDesc();
     }
 
     public List<Pokemon> getTop25() {
-        return pokemonRespository.findTop25ByOrderByAttRankAsc();
+        return pokemonRespository.findTop25ByOrderByAttRankDesc();
     }
 
     public void increaseAttackRank(Integer id) {
