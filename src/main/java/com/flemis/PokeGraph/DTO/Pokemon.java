@@ -3,8 +3,16 @@ package com.flemis.PokeGraph.DTO;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Transient;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class Pokemon {
     @Id
     private Integer id;
@@ -16,9 +24,6 @@ public class Pokemon {
     private Integer attRank = 0;
     private Integer spdRank = 0;
     private Integer lifeRank = 0;
-
-    public Pokemon() {
-    }
 
     public Pokemon(Integer id, String name) {
         this.id = id;
@@ -33,74 +38,13 @@ public class Pokemon {
         this.lifeRank = lifeRank;
     }
 
-    public Integer getId() {
-        return this.id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getSprite() {
         return String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/%d.png",
                 this.id);
     }
 
-    public void setSprite(String sprite) {
-        this.sprite = sprite;
-    }
-
-    public void setPokedex(String pokedex) {
-        this.pokedex = pokedex;
-    }
-
     public String getPokedex() {
         return String.format("https://www.pokemon.com/br/pokedex/%s",
                 this.name);
-    }
-
-    public Integer getAttRank() {
-        return this.attRank;
-    }
-
-    public void setAttRank(Integer attRank) {
-        this.attRank = attRank;
-    }
-
-    public Integer getSpdRank() {
-        return this.spdRank;
-    }
-
-    public void setSpdRank(Integer spdRank) {
-        this.spdRank = spdRank;
-    }
-
-    public Integer getLifeRank() {
-        return this.lifeRank;
-    }
-
-    public void setLifeRank(Integer lifeRank) {
-        this.lifeRank = lifeRank;
-    }
-
-    @Override
-    public String toString() {
-        return "{" +
-                " id='" + getId() + "'" +
-                ", name='" + getName() + "'" +
-                ", sprite='" + getSprite() + "'" +
-                ", pokedex_link='" + getPokedex() + "'" +
-                ", attRank='" + getAttRank() + "'" +
-                ", spdRank='" + getSpdRank() + "'" +
-                ", lifeRank='" + getLifeRank() + "'" +
-                "}";
     }
 }

@@ -1,0 +1,15 @@
+type Pokemon{
+    id: ID!
+    name: String
+    sprite: String
+    pokedex: String
+    attRank: Int
+    spdRank: Int
+    lifeRank: Int
+}
+
+type Query{
+    atkList: [Pokemon]
+    spdList: [Pokemon]
+    lifeList: [Pokemon]
+}
